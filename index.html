@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <!-- Tailwind CSS for fast, modern styling -->
+  <script src="https://tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation -->
+  <header className="max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+    <span class="text-xl font-bold tracking-tight text-indigo-400">dev.io</span>
+    <button id="themeToggle" class="text-sm bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition">
+      Sparkle ✨
+    </button>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-6 py-16 md:py-24">
+    <div class="space-y-6">
+      <div class="inline-flex items-center space-x-2 bg-indigo-950/60 border border-indigo-800/50 px-3 py-1 rounded-full text-xs text-indigo-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Available for new projects</span>
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+        Building clean code & <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">digital experiences.</span>
+      </h1>
+      
+      <p class="text-slate-400 max-w-xl text-base md:text-lg">
+        I’m a software creator focused on minimalist web apps, open-source tools, and high-performance interfaces.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a href="#projects" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-indigo-600/25">
+          View Projects
+        </a>
+        <a href="https://github.com" target="_blank" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-medium px-6 py-3 rounded-xl transition">
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <section id="projects" class="mt-24">
+      <h2 class="text-2xl font-bold mb-6">Featured Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Project 1 -->
+        <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-indigo-500/50 transition">
+          <div class="text-xs text-indigo-400 font-mono mb-2">TypeScript • Tailwind</div>
+          <h3 class="text-xl font-semibold mb-2">CLI Tool Suite</h3>
+          <p class="text-slate-400 text-sm mb-4">A fast command-line utility to scaffold developer environments in seconds.</p>
+          <span class="text-xs text-slate-500">Source code on GitHub</span>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-slate-900/60 border border-slate-800 p-6 rounded-2xl hover:border-cyan-500/50 transition">
+          <div class="text-xs text-cyan-400 font-mono mb-2">JavaScript • API</div>
+          <h3 class="text-xl font-semibold mb-2">Realtime Dashboard</h3>
+          <p class="text-slate-400 text-sm mb-4">Minimalist analytics tracker with live metrics and clean charts.</p>
+          <span class="text-xs text-slate-500">Source code on GitHub</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-4xl mx-auto px-6 py-12 border-t border-slate-900 text-center text-xs text-slate-500">
+    © <span id="year"></span> Built with plain HTML & Tailwind.
+  </footer>
+
+  <!-- Basic Script -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      alert('Thanks for checking out the repo! Star it on GitHub 🌟');
+    });
+  </script>
+</body>
+</html>
